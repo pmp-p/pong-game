@@ -13,11 +13,11 @@ import aio.fetch
 
 aio.fetch.FS("""
 .
-src ~ src
+module ~ module
 ├── main.py
 """)
 async def main():
-    from src.main import main as async_main
+    from module.main import main as async_main
     await async_main()
 
 asyncio.run(main())
