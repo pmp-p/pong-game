@@ -15,7 +15,10 @@ aio.fetch.FS("""
 .
 main.py
 """)
-from main import main
+async def main():
+    from main import main
+    await main()
+    
 asyncio.run(main())
 
 # --></script></html>
