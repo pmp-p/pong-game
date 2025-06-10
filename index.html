@@ -9,6 +9,7 @@
 
 print("Hello World")
 
+import os
 import aio.fetch
 
 aio.fetch.FS("""
@@ -18,6 +19,7 @@ module ~ module
 """)
 async def main():
     from module.main import main as async_main
+    os.chdir('/tmp')
     await async_main()
 
 asyncio.run(main())
