@@ -17,8 +17,8 @@ src ~ src
 ├── main.py
 """)
 async def main():
-    from main import main
-    await main()
+    from src.main import main as async_main
+    await async_main()
 
 asyncio.run(main())
 
